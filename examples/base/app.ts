@@ -1,6 +1,5 @@
 import axios from '../../src/index'
 
-
 // axios({
 //   method: 'get',
 //   url: '/base/get',
@@ -70,7 +69,7 @@ import axios from '../../src/index'
 //     b: 2
 //   }
 // })
-
+//
 // axios({
 //   method: 'post',
 //   url: '/base/post',
@@ -82,7 +81,7 @@ import axios from '../../src/index'
 //     b: 2
 //   }
 // })
-
+//
 // const arr = new Int32Array([21, 31])
 //
 // axios({
@@ -90,8 +89,8 @@ import axios from '../../src/index'
 //   url: '/base/buffer',
 //   data: arr
 // })
-
-
+//
+//
 // const paramsString = 'q=URLUtils.searchParams&topic=api'
 // const searchParams = new URLSearchParams(paramsString)
 //
