@@ -25,6 +25,11 @@ export interface AxiosRequestConfig {
   transformRequest?: AxiosTransformer | AxiosTransformer[]
   transformResponse?: AxiosTransformer | AxiosTransformer[]
   cancelToken?: CancelToken
+  withCredentials?: boolean
+  xsrfCookieName?: string
+  xsrfHeaderName?: string
+  onDownLoadProgress?:(e:ProgressEvent)=>void
+  onUploadProgress?:(e:ProgressEvent)=>void
 
   [propName: string]: any
 }
@@ -38,7 +43,8 @@ export interface AxiosResponse<T = any> {
   request: any
 }
 
-export interface AxiosPromise<T = any> extends Promise<AxiosResponse<T>> {}
+export interface AxiosPromise<T = any> extends Promise<AxiosResponse<T>> {
+}
 
 export interface AxiosError extends Error {
   isAxiosError: boolean
@@ -126,7 +132,7 @@ export interface CancelTokenSource {
 }
 
 export interface CancelTokenStatic {
-  new (executor: CancelExecutor): CancelToken
+  new(executor: CancelExecutor): CancelToken
 
   source(): CancelTokenSource
 }
@@ -136,5 +142,5 @@ export interface Cancel {
 }
 
 export interface CancelStatic {
-  new (message?: string): Cancel
+  new(message?: string): Cancel
 }
