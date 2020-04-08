@@ -116,7 +116,7 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
     }
 
     function handleResponse(response: AxiosResponse): void {
-      if (!validateStatus || validateStatus(response.status)) {
+      if (!validateStatus || validateStatus(response.status )) {
         resolve(response)
       } else {
         reject(

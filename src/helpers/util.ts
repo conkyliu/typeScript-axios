@@ -15,7 +15,7 @@ export function isFormData(val: any): val is FormData {
   return typeof val !== 'undefined' && val instanceof FormData
 }
 
-export function isURLSeachParams(val: any): val is URLSearchParams {
+export function isURLSearchParams(val: any): val is URLSearchParams {
   return typeof val !== 'undefined' && val instanceof URLSearchParams
 }
 
